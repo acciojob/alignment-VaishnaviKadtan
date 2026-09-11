@@ -1,185 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML Assignment #3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-    body{
-        font-family: "Times New Roman", serif;
-        background:#eee;
-    }
+    <title>HTML Assignment 3</title>
 
-    .container{
-        width:90%;
-        margin:auto;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+        }
 
-    h2{
-        text-align:center;
-        margin-bottom:0;
-    }
+        h2 {
+            text-align: center;
+            margin: 10px 0 2px;
+        }
 
-    table{
-        border-collapse:collapse;
-        width:100%;
-        margin:20px 0 60px;
-    }
+        /* Common table styling */
+        table.middle {
+            width: 80%;
+            margin: 0 auto 62px auto;
+            border: 1px solid black;
+            border-spacing: 1px;
+            padding: 1px;
+        }
 
-    td,th{
-        border:1px solid #000;
-        padding:3px;
-    }
+        table.middle td,
+        table.middle th {
+            border: 1px solid black;
+            padding: 1px;
+        }
 
-    /* First Table */
-    .table1 td{
-        height:22px;
-    }
+        /* Table 1 */
+        #table-1 {
+            height: 88px;
+        }
 
-    .left{
-        text-align:left;
-    }
+        #table-1 .center {
+            text-align: center;
+        }
 
-    .center{
-        text-align:center;
-    }
+        #table-1 .right {
+            text-align: right;
+        }
 
-    .right{
-        text-align:right;
-    }
+        /* Table 2 */
+        #table-2 {
+            height: 176px;
+        }
 
-    /* Second Table */
-    .table2 td{
-        height:22px;
-    }
+        #table-2 td {
+            height: 25px;
+        }
 
-    .header{
-        height:25px;
-    }
+        /* Table 3 */
+        #table-3 {
+            height: 305px;
+        }
 
-    .footer{
-        height:25px;
-    }
+        #table-3 .green {
+            background-color: green;
+            height: 25px;
+        }
 
-    .side{
-        width:180px;
-    }
+        #table-3 .blue {
+            background-color: blue;
+            height: 25px;
+        }
 
-    /* Third Table */
-    .table3{
-        height:300px;
-    }
+        #t-image {
+            text-align: center;
+            vertical-align: middle;
+        }
 
-    .green{
-        background:green;
-        height:25px;
-    }
-
-    .blue{
-        background:blue;
-        height:25px;
-    }
-
-    .image-cell{
-        text-align:center;
-        vertical-align:middle;
-    }
-
-    .image-cell img{
-        width:340px;
-        height:auto;
-        border:1px solid #999;
-    }
-</style>
+        #t-image img {
+            width: 340px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
 </head>
-<body>
 
-<div class="container">
+<body>
 
     <h2>HTML Assignment #3</h2>
 
-    <!-- Table 1 -->
-    <table class="table1">
-        <tr>
-            <td class="left">left</td>
-            <td class="center">center</td>
-            <td class="right">right</td>
-        </tr>
-        <tr>
-            <td class="left">left</td>
-            <td class="center">center</td>
-            <td class="right">right</td>
-        </tr>
-        <tr>
-            <td class="left">left</td>
-            <td class="center">center</td>
-            <td class="right">right</td>
-        </tr>
+    <!-- TABLE 1 -->
+    <table id="table-1" class="middle">
+        <tbody>
+            <tr>
+                <td id="t11">left</td>
+                <td id="t12">center</td>
+                <td id="t13">right</td>
+            </tr>
+
+            <tr class="center">
+                <td>left</td>
+                <td>center</td>
+                <td class="right">right</td>
+            </tr>
+
+            <tr>
+                <td>left</td>
+                <td class="center">center</td>
+                <td class="right">right</td>
+            </tr>
+        </tbody>
     </table>
 
-    <!-- Table 2 -->
-    <table class="table2">
-        <tr>
-            <td colspan="6" class="header"></td>
-        </tr>
 
-        <tr>
-            <td rowspan="4" class="side"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+    <!-- TABLE 2 -->
+    <table id="table-2" class="middle">
+        <tbody>
+            <!-- First row: single cell -->
+            <tr>
+                <td id="t21" colspan="6"></td>
+            </tr>
 
-        <tr>
-            <td></td>
-            <td colspan="3" rowspan="2"></td>
-            <td></td>
-        </tr>
+            <!-- Remaining 5 rows -->
+            <tr>
+                <td rowspan="4"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
 
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+            <tr>
+                <td></td>
+                <td colspan="3" rowspan="2"></td>
+                <td></td>
+            </tr>
 
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
 
-        <tr>
-            <td colspan="6" class="footer"></td>
-        </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="6"></td>
+            </tr>
+        </tbody>
     </table>
 
-    <!-- Table 3 -->
-    <table class="table3">
-        <tr>
-            <td colspan="3" class="green"></td>
-        </tr>
 
-        <tr>
-            <td></td>
+    <!-- TABLE 3 -->
+    <table id="table-3" class="middle">
+        <tbody>
+            <!-- Green first row -->
+            <tr>
+                <td colspan="3" class="green"></td>
+            </tr>
 
-            <td class="image-cell">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg"
-                     alt="Basketball">
-            </td>
+            <!-- Image row -->
+            <tr>
+                <td></td>
 
-            <td></td>
-        </tr>
+                <td id="t-image">
+                    <img
+                        src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2013_FallP3/Luthra%20Portfolio/images-1.jpeg"
+                        alt="HTML Assignment Image">
+                </td>
 
-        <tr>
-            <td colspan="3" class="blue"></td>
-        </tr>
+                <td></td>
+            </tr>
+
+            <!-- Blue last row -->
+            <tr>
+                <td colspan="3" class="blue"></td>
+            </tr>
+        </tbody>
     </table>
-
-</div>
 
 </body>
 </html>
